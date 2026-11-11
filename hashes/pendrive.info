@@ -1,0 +1,121 @@
+
+GUYMAGER ACQUISITION INFO FILE
+==============================
+
+Guymager
+========
+
+Version            : 0.8.13-1                                                                        
+Version timestamp  : 2021-08-04-17.00.00 UTC                                                         
+Compiled with      : gcc 8.3.0                                                                       
+libewf version     : 20140804 (not used as Guymager is configured to use its own EWF module)         
+libguytools version: 2.1.0                                                                           
+Host name          : caine                                                                           
+Domain name        : (none)                                                                          
+System             : Linux caine 5.15.0-67-generic #74-Ubuntu SMP Wed Feb 22 14:14:39 UTC 2023 x86_64
+
+
+Device information
+==================
+Command executed: bash -c "search="`basename /dev/sdb`: H..t P.......d A..a de.....d" && dmesg | grep -A3 "$search" || echo "No kernel HPA messages for /dev/sdb""
+Information returned:
+----------------------------------------------------------------------------------------------------
+   No kernel HPA messages for /dev/sdb
+
+Command executed: bash -c "smartctl -s on /dev/sdb ; smartctl -a /dev/sdb"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+   Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   /dev/sdb: Unknown USB bridge [0x090c:0x1000 (0x1100)]
+   Please specify device type with the -d option.
+   
+   Use smartctl -h to get a usage summary
+   
+   smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+   Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   /dev/sdb: Unknown USB bridge [0x090c:0x1000 (0x1100)]
+   Please specify device type with the -d option.
+   
+   Use smartctl -h to get a usage summary
+
+Command executed: bash -c "hdparm -I /dev/sdb"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   /dev/sdb:
+   
+   ATA device, with non-removable media
+   Standards:
+   	Likely used: 1
+   Configuration:
+   	Logical		max	current
+   	cylinders	0	0
+   	heads		0	0
+   	sectors/track	0	0
+   	--
+   	Logical/Physical Sector size:           512 bytes
+   	device size with M = 1024*1024:           0 MBytes
+   	device size with M = 1000*1000:           0 MBytes 
+   	cache/buffer size  = unknown
+   Capabilities:
+   	IORDY not likely
+   	Cannot perform double-word IO
+   	R/W multiple sector transfer: not supported
+   	DMA: not supported
+   	PIO: pio0
+
+Command executed: bash -c "CIDFILE=/sys/block/$(basename /dev/sdb)/device/cid; echo -n "CID: " ; if [ -e $CIDFILE ] ; then cat $CIDFILE  ; else echo "not available" ; fi "
+Information returned:
+----------------------------------------------------------------------------------------------------
+   CID: not available
+
+Hidden areas: unknown
+
+
+Acquisition
+===========
+
+Linux device            : /dev/sdb                                                           
+Device size             : 1002438656 (1,0GB)                                                 
+Format                  : Expert Witness Format, sub-format Guymager - file extension is .Exx
+Image meta data         
+   Case number          : CASO-001                                                           
+   Evidence number      : 3                                                                  
+   Examiner             : Esteban Altero                                                     
+   Description          : Pendrive encontrado                                                
+   Notes                : FB08091700059099                                                   
+Image path and file name: /mnt/hdd/CEC/AFI/Practica AFI/pendrive.Exx                         
+Info  path and file name: /mnt/hdd/CEC/AFI/Practica AFI/pendrive.info                        
+Hash calculation        : MD5 and SHA-256                                                    
+Source verification     : off                                                                
+Image verification      : on                                                                 
+
+No bad sectors encountered during acquisition.
+State: Finished successfully
+
+MD5 hash                   : 596f06c7400cce6d9212b6439c3daa87                                
+MD5 hash verified source   : --                                                              
+MD5 hash verified image    : 596f06c7400cce6d9212b6439c3daa87                                
+SHA1 hash                  : --                                                              
+SHA1 hash verified source  : --                                                              
+SHA1 hash verified image   : --                                                              
+SHA256 hash                : 13b3d6b69568d45410ca5b3d676281fd3d512b84b1505838d26440f5d45655ef
+SHA256 hash verified source: --                                                              
+SHA256 hash verified image : 13b3d6b69568d45410ca5b3d676281fd3d512b84b1505838d26440f5d45655ef
+Image verification OK. The image contains exactly the data that was written.
+
+Acquisition started : 2026-11-07 10:35:28 (ISO format YYYY-MM-DD HH:MM:SS)   
+Verification started: 2026-11-07 10:38:16                                    
+Ended               : 2026-11-07 10:38:39 (0 hours, 3 minutes and 11 seconds)
+Acquisition speed   : 5.72 MByte/s (0 hours, 2 minutes and 47 seconds)       
+Verification speed  : 41.57 MByte/s (0 hours, 0 minutes and 23 seconds)      
+
+
+Generated image files and their MD5 hashes
+==========================================
+
+No MD5 hashes available (configuration parameter CalcImageFileMD5 is off)
+MD5                               Image file
+n/a                               pendrive.E01

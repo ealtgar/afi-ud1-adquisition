@@ -4,3 +4,4 @@
 - **[registros-custodia](./registros-custodia/)**
 - **[hashes](./hashes)**
 - **[capturas](./capturas)**
+- **[notas de trabajo](./notas-de-trabajo.md)**

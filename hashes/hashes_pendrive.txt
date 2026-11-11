@@ -1,0 +1,4 @@
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          7DC2030794E309B3DE7A47BF11C1981CBA4B00E052CEE6D1DB441E539C250F0D       E:\CEC\AFI\Practica AFI\pendrive.E01
+SHA256          9EE7F94ECEC8F168F8D50D34FD7658D901D516480EB5E1366030E7CCB868C07A       E:\CEC\AFI\Practica AFI\pendrive.info

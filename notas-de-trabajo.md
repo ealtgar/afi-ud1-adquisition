@@ -54,7 +54,7 @@ Con la máquina encendida, sigue el orden de volatilidad y anota la hora de cada
 7. **El apagado.** Decide cómo apagar, hazlo y justifícalo.
 ## 1. Estado inicial
 
-![[AFI/UD1 - Evidence Acquisition and Preservetion/Proyectos/Adquirir_equipo_compometido/img/aec2/captura ventana.png]]
+![captura ventana.png](capturas/captura%20ventana.png)
 
  Ambas fechas coinciden en la hora (*VM: 11:17 AM, Host: 11:17 AM*).
 - ***10:17 UTC***
@@ -65,17 +65,17 @@ Al ser una máquina *Windows 7 Professional*, las herramientas actuales de adqui
 
 - **Start: DumpIT** --> 11:24 AM (10:24 UTC)
 - **End: DumpIT** --> 11:28 AM (10:28 UTC)
-![[DumpIT.png]]
+![DumpIT.png](capturas/DumpIT.png)
 ## Respuesta en vivo
 - **Start: respuesta-en-vivo.ps1 (modificado)** ---> 11:34 AM (10:34 UTC)
 - **End: respuesta-en-vivo.ps1 (modificado)** ---> 11:35 AM (10:35 UTC)
-![[respuesta en vivo.png]]
+![respuesta en vivo.png](capturas/respuesta%20en%20vivo.png)
 ## Trafico de red
 
 - **Start: `VBoxManage`** ---> 11:41 AM (10:41 UTC)
 - **End: `VBoxManage`** ---> 11:43 AM (10:43 UTC)
 
-![[captura red.png]]
+![captura red.png](capturas/captura%20red.png)
 
 ```bash
 VBoxManage controlvm "FORENSIC_10" nictracefile1 /ruta/caso/red.pcap
@@ -97,7 +97,7 @@ VBoxManage controlvm "FORENSIC_10" nictrace1 on     # y "off" al terminar
 - **Start: `reg save HKLM\SOFTWARE`** ---> 11:47 AM (10:47 UTC)
 - **End: `reg save HKLM\SOFTWARE`** ---> 11:49 AM (10:49 UTC)
 
-![[registros.png]]
+![registros.png](capturas/registros.png)
 ### Visor de eventos
 
 - **Start: `wevtutil epl System`** ---> 11:55 AM (10:55 UTC)
@@ -106,13 +106,13 @@ VBoxManage controlvm "FORENSIC_10" nictrace1 on     # y "off" al terminar
 - **Start: `wevtutil epl Security`** ---> 11:55 AM (10:55 UTC)
 - **End: `wevtutil epl Security`** ---> 11:55 AM (10:55 UTC)
 
-![[visor eventos.png]]
+![visor eventos.png](capturas/visor%20eventos.png)
 ### Prefetch
 
 - **Start: `Copy-Item -Path "C:\Windows\Prefetch*" -Destination "D:\salida\Prefetch" -Recurse`** ---> 11:58 AM (10:58 UTC)
 - **End: `Copy-Item -Path "C:\Windows\Prefetch*" -Destination "D:\salida\Prefetch" -Recurse`** ---> 11:59 AM (10:59 UTC)
 
-![[prefetch.png]]
+![prefetch.png](capturas/prefetch)
 ### Tabla MFT
 
 >No se pudo recuperar ya que debemos tener acceso al disco en crudo y herramientas como FTK Imager no podían ser usadas.
@@ -123,14 +123,14 @@ Se comprobó si existía algún sistema de cifrado. Se ejecutó en primera insta
 - **Start: `manage-bde -status`** ---> 12:01 AM (11:01 UTC)
 - **End: `manage-bde`** ---> 12:01 AM (11:01 UTC)
 
-![[manage-bde.png]]
+![manage-bde.png](capturas/manage-bde.png)
 
 >El disco no está cifrado mediante **BitLocker**.
 
 - **Start: EDDv310** ---> 12:04 AM (11:04 UTC)
 - **End: EDDv310** ---> 12:04 AM (11:04 UTC)
 
-![[EDD.png]]
+![EDD.png](capturas/EDD.png)
 
 >El disco no está cifrado.
 
@@ -225,11 +225,11 @@ Antes de tocarlo, fotografíalo y anota marca, modelo, capacidad y número de se
 
 Cuando tenemos la máquina virtual con Caine ejecutándose, conectamos el pendrive a la máquina virtual y comprobamos que esté montado en solo lectura:
 
-![[Pasted image 20261107112940.png]]
+![Pasted image 20261107112940.png](capturas/Pasted%20image%2020261107112940.png)
 
-![[Pasted image 20261107113732.png]]
+![Pasted image 20261107113732.png](capturas/Pasted%20image%2020261107113732.png)
 
-![[Pasted image 20261107114414.png]]
+![Pasted image 20261107114414.png](capturas/Pasted%20image%2020261107114414.png)
 
 ---
 # Parte 3 · Busca tu marca
@@ -249,12 +249,12 @@ strings -el '$MFT' | grep "marca-"`
 En las imágenes del disco y del pendrive, móntalas en solo lectura y localiza tu fichero: en el escritorio del Administrador y en el pendrive.
 ## Marca en RAM
 
-![[Pasted image 20261107121129.png]]
+![Pasted image 20261107121129.png](capturas/Pasted%20image%2020261107121129.png)
 ## Marca en Triaje
 
 Por incompatibilidad de las herramientas de triaje, no se pudo sacar la tabla $MFT. No obstante, rastreamos la marca en el resto de artefactos obtenidos en la adquisición manual del triaje.
 
-![[Pasted image 20261107121532.png]]
+![Pasted image 20261107121532.png](Pasted%20image%2020261107121532.png)
 
 ## Marca en Disco Virtual
 
@@ -297,7 +297,7 @@ cat ./disco/Users/Administrator/Desktop/marca-EstebanAlteroGarcia.txt.txt
 AFI-EstebanAlteroGarcia-20261031
 ```
 
-![[Pasted image 20261107135356.png]]
+![Pasted image 20261107135356.png](capturas/Pasted%20image%2020261107135356.png)
 
 >[!important]
 >*Las fechas de la marca del disco y la memoria RAM no coinciden en las fechas, debido a que el archivo se almacenó un día diferente al de la adquisición de las evidencias.*
@@ -319,7 +319,7 @@ sudo ewfmount /mnt/hdd/CEC/AFI/Practica AFI/pendrive.E01 /mnt/e01
 sudo losetup -Pf /mnt/e01/ewf1
 ```
 
-![[Pasted image 20261107134426.png]]
+![Pasted image 20261107134426.png](capturas/Pasted%20image%2020261107134426.png)
 
 ```bash
 # 4. Montamos los datos en Solo Lectura

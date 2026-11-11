@@ -326,4 +326,4 @@ sudo losetup -Pf /mnt/e01/ewf1
 sudo mount -t vfat -o ro /dev/loop2p1 /mnt/datos
 ```
 
-![[Pasted image 20261107135255.png]]
+![Pasted image 20261107135255.png](capturas/Pasted%20image%2020261107135255.png)

@@ -112,7 +112,7 @@ VBoxManage controlvm "FORENSIC_10" nictrace1 on     # y "off" al terminar
 - **Start: `Copy-Item -Path "C:\Windows\Prefetch*" -Destination "D:\salida\Prefetch" -Recurse`** ---> 11:58 AM (10:58 UTC)
 - **End: `Copy-Item -Path "C:\Windows\Prefetch*" -Destination "D:\salida\Prefetch" -Recurse`** ---> 11:59 AM (10:59 UTC)
 
-![prefetch.png](capturas/prefetch)
+![prefetch.png](capturas/prefetch.png)
 ### Tabla MFT
 
 >No se pudo recuperar ya que debemos tener acceso al disco en crudo y herramientas como FTK Imager no podían ser usadas.

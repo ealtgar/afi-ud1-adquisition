@@ -254,7 +254,7 @@ En las imágenes del disco y del pendrive, móntalas en solo lectura y localiza 
 
 Por incompatibilidad de las herramientas de triaje, no se pudo sacar la tabla $MFT. No obstante, rastreamos la marca en el resto de artefactos obtenidos en la adquisición manual del triaje.
 
-![Pasted image 20261107121532.png](Pasted%20image%2020261107121532.png)
+![Pasted image 20261107121532.png](capturas/Pasted%20image%2020261107121532.png)
 
 ## Marca en Disco Virtual
 
